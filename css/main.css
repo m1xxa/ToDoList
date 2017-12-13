@@ -1,15 +1,19 @@
-.label {
-    margin-top: 8px;
+.head-inform {
+    text-align: center;
+}
+
+.user-inform {
+    margin-top: 30px;
+}
+
+.user-inform label {
+    margin-top: 6px;
 }
 
 .todo-data {
-    margin: 10px;
+    margin-top: 30px;
 }
 
-.todo-data form {
-    margin: 24px;
-}
-
-.user-data form {
-    margin: 10px;
+.tab-pane {
+    margin-top: 30px;
 }

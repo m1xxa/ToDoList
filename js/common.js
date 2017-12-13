@@ -1,5 +1,39 @@
+$( "#role-selector" ).change(function() {
+    var roleSelector = document.getElementById("role-selector");
+    var value = roleSelector.options[roleSelector.selectedIndex].value;
+
+    $userSpecializationBlock  = $(".user-specialization-block");
+    $userJobBlock = $(".user-job-block");
+
+    switch(value){
+        case "Select role..." :
+            $userSpecializationBlock.addClass("d-none");
+            $userJobBlock.addClass("d-none");
+            break;
+        case "User" :
+            $userSpecializationBlock.addClass("d-none");
+            $userJobBlock.addClass("d-none");
+            break;
+        case "Student" :
+            $userSpecializationBlock.removeClass("d-none");
+            $userJobBlock.addClass("d-none");
+            break;
+        case "Developer" :
+            $userSpecializationBlock.removeClass("d-none");
+            $userJobBlock.removeClass("d-none");
+            break;
+    }
+});
+
+
+
+
+/*
+
+
 var users = [];
-var role = ["User", "Student", "Developer"];
+const roles = ["User", "Student", "Developer"];
+
 function User(){
     var name;
     var surname;
@@ -12,14 +46,22 @@ function User(){
 User.prototype.createUser = function (name, surname) {
     this.name = name;
     this.surname = surname;
-    this.role = role[0];
+    this.role = roles[0];
+    this.tasks = [];
+    $('#tab-simple').removeClass("disabled").addClass("active");
+    $("#tab-home").addClass("disabled");
+    $("#tab-project").addClass("disabled");
 };
 
 User.prototype.createStudent = function (name, surname, specialization) {
     this.name = name;
     this.surname = surname;
     this.specialization = specialization;
-    this.role = role[1];
+    this.role = roles[1];
+    this.tasks = [];
+    $('#tab-simple').removeClass("disabled").addClass("active");
+    $("#tab-home").removeClass("disabled");
+    $("#tab-project").addClass("disabled");
 };
 
 User.prototype.createDeveloper = function (name, surname, specialization, jobtitle) {
@@ -27,14 +69,17 @@ User.prototype.createDeveloper = function (name, surname, specialization, jobtit
     this.surname = surname;
     this.specialization = specialization;
     this.jobtitle = jobtitle;
-    this.role = role[2];
+    this.role = roles[2];
+    this.tasks = [];
+    $('#tab-simple').removeClass("disabled").addClass("active");
+    $("#tab-home").removeClass("disabled");
+    $("#tab-project").removeClass("disabled");
 };
 
 User.prototype.addSimpleTask = function (title, status) {
     var currentTask = {};
     currentTask['title'] = title;
     currentTask['status'] = status;
-    this.tasks = [];
     this.tasks.push(currentTask);
 };
 
@@ -43,7 +88,6 @@ User.prototype.addHomeTask = function (title, status, description) {
     currentTask['title'] = title;
     currentTask['status'] = status;
     currentTask['description'] = description;
-    this.tasks = [];
     this.tasks.push(currentTask);
 };
 
@@ -53,7 +97,6 @@ User.prototype.addProjectTask = function (title, status, description, deadline) 
     currentTask['status'] = status;
     currentTask['description'] = description;
     currentTask['deadline'] = deadline;
-    this.tasks = [];
     this.tasks.push(currentTask);
 };
 
@@ -78,22 +121,36 @@ $( "#role-selector" ).change(function() {
             break;
         case "Developer" :
             var developer = new User();
-            developer.createStudent(name, surname, specialization, job);
+            developer.createDeveloper(name, surname, specialization, job);
             users.push(developer);
             break;
     }
     console.log(users);
 });
 
+var simpleTaskTitle = document.getElementById("simple-task-title");
+var simpleTaskStatus = document.getElementById("simple-task-status");
+var homeTaskTitle = document.getElementById("home-task-title");
+var homeTaskDesc = document.getElementById("home-task-description");
+var homeTaskStatus = document.getElementById("home-task-status");
+var projectTaskTitle = document.getElementById("project-task-title");
+var projectTaskDesc = document.getElementById("project-task-description");
+var projectTaskStatus = document.getElementById("project-task-status");
+var projectTaskDeadline = document.getElementById("project-task-deadline");
+
 $("#add-simple").click(function () {
-    var simpleTaskTitle = document.getElementById("simple-task-title").value;
-    var simpleTaskStatus = document.getElementById("simple-task-status").value;
-    users[users.length-1].addSimpleTask(simpleTaskTitle, simpleTaskStatus);
+    users[users.length-1].addSimpleTask(simpleTaskTitle.value, simpleTaskStatus.value);
     console.log(users);
 });
+
 $("#add-home").click(function () {
-
+    users[users.length-1].addHomeTask(homeTaskTitle.value, homeTaskDesc.value, homeTaskStatus.value);
+    console.log(users);
 });
+
 $("#add-project").click(function () {
-
+    users[users.length-1].addProjectTask(projectTaskTitle.value, projectTaskDesc.value, projectTaskStatus.value, projectTaskDeadline.value);
+    console.log(users);
 });
+
+*/
