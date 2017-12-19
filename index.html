@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
 <div class="container">
     <div class="row head-inform">
         <div class="offset-4 col-lg-4 head-inform">
@@ -17,7 +16,7 @@
         </div>
     </div>
     <div class="row offset-4 col-lg-5 user-inform">
-        <form>
+        <form name = "userform">
             <div class="mx-sm-3 row user-default-block">
                 <div class="col-lg-4 label"><label for="role-title">Role</label></div>
                 <div class="col-lg-8 form-element">
@@ -52,9 +51,9 @@
                 </div>
             </div>
             <div class="form-group mx-sm-3 row user-job-block d-none">
-                <div class="col-lg-4 label"><label for="job-title">Job title</label></div>
+                <div class="col-lg-4 label"><label for="job">Job title</label></div>
                 <div class="col-lg-8 form-element">
-                    <input type="text" class="form-control" id="job-title" placeholder="Enter job title">
+                    <input type="text" class="form-control" id="job" placeholder="Enter job title">
                 </div>
             </div>
             <div class="form-group mx-sm-3 row submit-block">
@@ -66,27 +65,27 @@
     </div>
     <div class="offset-3 col-lg-7 todo-data d-none">
         <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active " id = "tab-simple" href="#simple-task" data-toggle="tab">Simple task</a></li>
-            <li class="nav-item"><a class="nav-link disabled" id = "tab-home" href="#home-task" data-toggle="tab">Home task</a></li>
-            <li class="nav-item"><a class="nav-link disabled" id = "tab-project" href="#project-task" data-toggle="tab">Project task</a></li>
+            <li class="nav-item" id = "tab-simple"><a class="nav-link active " href="#simple-task" data-toggle="tab">Simple task</a></li>
+            <li class="nav-item d-none" id = "tab-home"><a class="nav-link" href="#home-task" data-toggle="tab">Home task</a></li>
+            <li class="nav-item d-none" id = "tab-project"><a class="nav-link" href="#project-task" data-toggle="tab">Project task</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="simple-task">
-                <form>
+                <form name = "simpleTaskForm">
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="simple-task-title">Title</label>
+                            <label for="stTitle">Title</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="simple-task-title" placeholder="Title">
+                            <input type="text" class="form-control" id="stTitle" placeholder="Title">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="simple-task-status">Status</label>
+                            <label for="stStatus">Status</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="simple-task-status" placeholder="Status">
+                            <input type="text" class="form-control" id="stStatus" placeholder="Status">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
@@ -95,29 +94,29 @@
                 </form>
             </div>
             <div class="tab-pane" id="home-task">
-                <form>
+                <form name="homeTaskForm">
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="home-task-title">Title</label>
+                            <label for="htTitle">Title</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="home-task-title" placeholder="Title">
+                            <input type="text" class="form-control" id="htTitle" placeholder="Title">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="home-task-status">Status</label>
+                            <label for="htStatus">Status</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="home-task-status" placeholder="Status">
+                            <input type="text" class="form-control" id="htStatus" placeholder="Status">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="home-task-description">Description</label>
+                            <label for="htDescription">Description</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="home-task-description" placeholder="Description">
+                            <input type="text" class="form-control" id="htDescription" placeholder="Description">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
@@ -126,37 +125,37 @@
                 </form>
             </div>
             <div class="tab-pane" id="project-task">
-                <form>
+                <form name="projectTaskForm">
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="project-task-title">Title</label>
+                            <label for="ptTitle">Title</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="project-task-title" placeholder="Title">
+                            <input type="text" class="form-control" id="ptTitle" placeholder="Title">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="project-task-status">Status</label>
+                            <label for="ptStatus">Status</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="project-task-status" placeholder="Status">
+                            <input type="text" class="form-control" id="ptStatus" placeholder="Status">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="project-task-description">Description</label>
+                            <label for="ptDescription">Description</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="project-task-description" placeholder="Description">
+                            <input type="text" class="form-control" id="ptDescription" placeholder="Description">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
                         <div class="col-lg-2 label">
-                            <label for="project-task-deadline">Deadline</label>
+                            <label for="ptDeadline">Deadline</label>
                         </div>
                         <div class="col-lg-8 form-element">
-                            <input type="text" class="form-control" id="project-task-deadline" placeholder="Deadline">
+                            <input type="text" class="form-control" id="ptDeadline" placeholder="Deadline">
                         </div>
                     </div>
                     <div class="form-group mx-sm-3 row">
@@ -167,7 +166,6 @@
         </div>
     </div>
 </div>
-
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
