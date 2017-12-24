@@ -2,6 +2,9 @@
     text-align: center;
 }
 
+.listview {
+    text-align: center;
+}
 .user-inform {
     margin-top: 30px;
 }
@@ -17,3 +20,39 @@
 .tab-pane {
     margin-top: 30px;
 }
+
+.logout {
+    margin: 10px;
+}
+
+.list-group-item{
+    margin: 3px;
+    padding: 3px;
+    text-align: left;
+    box-shadow: 2px 2px #aa9;
+}
+
+.list-group-item:hover {
+    background-color: darkgrey;
+}
+
+
+
+.list-group-item-heading {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 2px;
+    padding-top: 2px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.list-group-item-text {
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+

@@ -1,6 +1,6 @@
 $( "#role-selector" ).change(function() {
-    var roleSelector = document.getElementById("role-selector");
-    var value = roleSelector.options[roleSelector.selectedIndex].value;
+    const roleSelector = document.getElementById("role-selector");
+    const value = roleSelector.options[roleSelector.selectedIndex].value;
 
     $userSpecializationBlock  = $(".user-specialization-block");
     $userJobBlock = $(".user-job-block");
